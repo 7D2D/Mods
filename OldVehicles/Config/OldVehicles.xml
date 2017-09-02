@@ -4,54 +4,44 @@
 		<!-- This tells SDX to add the following block to the bottom of the block list -->
 		<append xpath="/blocks">	
 			<block id="" name="oldSedan"> <!-- Old Rusty Car (Remade) by Renafox is licensed under CC Attribution-NonCommercial -->
-				<property name="Extends" value="cntCar03SedanDamage0" />
+				<property name="Extends" value="cntCar03SedanDamage2" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#OldVehicles?OldSedanPrefab" /> 
 				<property name="CustomIcon" value="cntCar03SedanDamage0" />
 				<property name="MultiBlockDim" value="2,2,6" />
-				<property name="ShowModelOnFall" value="false" />
 				<property name="BigDecorationRadius" value="6" />
-				<property name="CanDecorateOnSlopes" value="false" />
 			</block>
 			<block id="" name="oldPickup"> <!-- Author unknown -->
-				<property name="Extends" value="cntCar03SedanDamage0" />
+				<property name="Extends" value="cntCar03SedanDamage2" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#OldVehicles?OldPickupPrefab" />
 				<property name="CustomIcon" value="cntCar03SedanDamage0" />
 				<property name="MultiBlockDim" value="2,2,6" />
-				<property name="ShowModelOnFall" value="false" />
 				<property name="BigDecorationRadius" value="6" />
-				<property name="CanDecorateOnSlopes" value="false" />
 			</block>		
 			<block id="" name="oldStationWagon"> <!-- Old Station Wagon by Renafox is licensed under CC Attribution-NonCommercial -->
-				<property name="Extends" value="cntCar03SedanDamage0" />
+				<property name="Extends" value="cntCar03SedanDamage2" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#OldVehicles?OldStationWagonPrefab" /> 
 				<property name="CustomIcon" value="cntCar03SedanDamage0" />
 				<property name="MultiBlockDim" value="2,2,6" />
-				<property name="ShowModelOnFall" value="false" />
 				<property name="BigDecorationRadius" value="6" />
-				<property name="CanDecorateOnSlopes" value="false" />
 			</block>
 			<block id="" name="oldPoliceCar"> <!-- Old Police Car by Renafox is licensed under CC Attribution-NonCommercial -->
-				<property name="Extends" value="cntCar03SedanDamage0" />
+				<property name="Extends" value="cntCar03SedanDamage2" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#OldVehicles?OldPoliceCarPrefab" /> 
 				<property name="CustomIcon" value="cntCar03SedanDamage0" />
 				<property name="MultiBlockDim" value="2,2,6" />
-				<property name="ShowModelOnFall" value="false" />
 				<property name="BigDecorationRadius" value="6" />
-				<property name="CanDecorateOnSlopes" value="false" />
 			</block>
 			<block id="" name="oldGazZ52"> <!-- Old Gaz 52 by Renafox is licensed under CC Attribution-NonCommercial -->
-				<property name="Extends" value="cntCar03SedanDamage0" />
+				<property name="Extends" value="cntCar03SedanDamage2" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#OldVehicles?OldGazZ52Prefab" /> 
 				<property name="CustomIcon" value="cntCar03SedanDamage0" />
 				<property name="MultiBlockDim" value="2,3,7" />
-				<property name="ShowModelOnFall" value="false" />
 				<property name="BigDecorationRadius" value="7" />
-				<property name="CanDecorateOnSlopes" value="false" />
 			</block>
 		</append>
 	</config>
