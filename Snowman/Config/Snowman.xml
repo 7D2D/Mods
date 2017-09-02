@@ -1,0 +1,22 @@
+<configs>
+	<!--  This tells SDX to add to the blocks.xml -->
+	<config name="blocks">	
+		<!-- This tells SDX to add the following block to the bottom of the block list -->
+		<append xpath="/blocks">	
+			<block id="" name="snowman">
+				<property name="Material" value="snow" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="MultiBlockDim" value="1,2,1" />
+				<property name="Model" value="#Snowman?SnowmanPrefab"/>
+				<property name="CanPickup" value="false" />
+				<property name="CustomIcon" value="ui_game_symbol_snowman" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+				<property class="RepairItems"> <property name="snowBall" value="10"/> </property>
+				<drop event="Harvest" name="snowBall" count="10" tool_category="harvestingTools"/>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1"/>
+				<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0"/>
+			</block>
+		</append>
+	</config>
+</configs>
