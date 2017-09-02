@@ -1,0 +1,24 @@
+<configs>
+	<!--  This tells SDX to add to the blocks.xml -->
+	<config name="blocks">	
+		<!-- This tells SDX to add the following block to the bottom of the block list -->
+		<append xpath="/blocks">	
+			<block id="" name="RoadBlock01">
+				<property name="Extends" value="concreteNoUpgradeMaster" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#RoadBlocks?RoadBlock01Prefab" /> <!-- Free Unity store models by Rakshi games -->
+				<property name="MultiBlockDim" value="3,1,1" />
+				<property name="Collide" value="melee,bullet,arrow,rocket" />
+				<property name="CustomIcon" value="ui_game_symbol_roadblock" />
+			</block>
+			<block id="" name="RoadBlock02">
+				<property name="Extends" value="concreteNoUpgradeMaster" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#RoadBlocks?RoadBlock02Prefab" />
+				<property name="MultiBlockDim" value="3,1,1" />
+				<property name="Collide" value="melee,bullet,arrow,rocket" />
+				<property name="CustomIcon" value="ui_game_symbol_roadblock" />
+			</block>
+		</append>
+	</config>
+</configs>
