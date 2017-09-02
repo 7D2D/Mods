@@ -1,0 +1,56 @@
+<configs>
+	<!--  This tells SDX to add to the blocks.xml -->
+	<config name="blocks">	
+		<!-- This tells SDX to add the following block to the bottom of the block list -->
+		<append xpath="/blocks">	
+			<block id="" name="phoneBooth01">
+				<property name="Material" value="metal" />
+				<property name="StabilitySupport" value="false" />
+				<property name="MaxDamage" value="150" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#PhoneBooths?PhoneBooth01Prefab"/> <!-- All models are free assets from Unity store by KrazyFX -->
+				<property name="MultiBlockDim" value="1,2,1" />
+				<property name="Collide" value="melee,bullet,arrow,rocket" />
+				<property name="CustomIcon" value="ui_game_symbol_phonebooth" />
+				<drop event="Harvest" name="electricParts" count="1,4" tool_category="Disassemble" />
+				<drop event="Harvest" name="electronicParts" count="1,2" tool_category="Disassemble" />
+				<drop event="Harvest" name="scrapPlastics" count="1,2" tool_category="Disassemble" />
+				<drop event="Destroy" name="scrapPlastics" count="3,5" />
+				<drop event="Destroy" name="scrapIron" count="3,6" />
+				<drop event="Destroy" count="0" />
+			</block>
+			<block id="" name="phoneBooth02">
+				<property name="Material" value="metal" />
+				<property name="StabilitySupport" value="false" />
+				<property name="MaxDamage" value="150" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#PhoneBooths?PhoneBooth02Prefab"/>
+				<property name="MultiBlockDim" value="1,2,1" />
+				<property name="Collide" value="melee,bullet,arrow,rocket" />
+				<property name="CustomIcon" value="ui_game_symbol_phonebooth" />
+				<drop event="Harvest" name="electricParts" count="1,4" tool_category="Disassemble" />
+				<drop event="Harvest" name="electronicParts" count="1,2" tool_category="Disassemble" />
+				<drop event="Harvest" name="scrapPlastics" count="1,2" tool_category="Disassemble" />
+				<drop event="Destroy" name="scrapPlastics" count="3,5" />
+				<drop event="Destroy" name="scrapIron" count="3,6" />
+				<drop event="Destroy" count="0" />
+			</block>	
+			<block id="" name="phoneBooth03">
+				<property name="Material" value="metal" />
+				<property name="StabilitySupport" value="false" />
+				<property name="MaxDamage" value="150" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#PhoneBooths?PhoneBooth03Prefab"/>
+				<property name="MultiBlockDim" value="1,2,1" />
+				<property name="Collide" value="melee,bullet,arrow,rocket" />
+				<property name="CustomIcon" value="ui_game_symbol_phonebooth" />
+				<drop event="Harvest" name="electricParts" count="1,4" tool_category="Disassemble" />
+				<drop event="Harvest" name="electronicParts" count="1,2" tool_category="Disassemble" />
+				<drop event="Harvest" name="scrapPlastics" count="1,2" tool_category="Disassemble" />
+				<drop event="Destroy" name="scrapPlastics" count="3,5" />
+				<drop event="Destroy" name="scrapIron" count="3,6" />
+				<drop event="Destroy" count="0" />
+			</block>	
+		</append>
+	</config>
+</configs>
