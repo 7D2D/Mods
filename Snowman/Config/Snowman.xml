@@ -3,11 +3,11 @@
 	<config name="blocks">	
 		<!-- This tells SDX to add the following block to the bottom of the block list -->
 		<append xpath="/blocks">	
-			<block id="" name="snowman">
+			<block id="" name="snowman"> 
 				<property name="Material" value="snow" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="MultiBlockDim" value="1,2,1" />
-				<property name="Model" value="#Snowman?SnowmanPrefab"/>
+				<property name="Model" value="#Snowman?SnowmanPrefab"/> <!-- Free model - Created by Swp -->
 				<property name="CanPickup" value="false" />
 				<property name="CustomIcon" value="ui_game_symbol_snowman" />
 				<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
