@@ -1,0 +1,93 @@
+<configs>
+	<!--  This tells SDX to add to the blocks.xml -->
+	<config name="blocks">	
+		<!-- This tells SDX to add the following block to the bottom of the block list -->
+		<append xpath="/blocks">	
+			<block id="" name="HazardSignBio"> <!-- All signs are free Unity store assets, by SB Laboratory -->
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignBioPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="ModelOffset" value="0,.5,.5"/>
+				<property name="MultiBlockDim" value="2,2,1" />
+			</block>
+			<block id="" name="HazardSignBioSmall"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignBioSmallPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="MultiBlockDim" value="1,1,1" />
+			</block>
+			<block id="" name="HazardSignDanger"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignDangerPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="ModelOffset" value="0,.5,.5"/>
+				<property name="MultiBlockDim" value="2,2,1" />
+			</block>
+			<block id="" name="HazardSignDangerSmall"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignDangerSmallPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="MultiBlockDim" value="1,1,1" />
+			</block>			
+			<block id="" name="HazardSignElec"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignElecPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="ModelOffset" value="0,.5,.5"/>
+				<property name="MultiBlockDim" value="2,2,1" />
+			</block>
+			<block id="" name="HazardSignElecSmall"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignElecSmallPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="MultiBlockDim" value="1,1,1" />
+			</block>			
+			<block id="" name="HazardSignRad"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignRadPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="ModelOffset" value="0,.5,.5"/>
+				<property name="MultiBlockDim" value="2,2,1" />
+			</block>
+			<block id="" name="HazardSignRadSmall"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignRadSmallPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="MultiBlockDim" value="1,1,1" />
+			</block>
+			<block id="" name="HazardSignVirus"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignVirusPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="ModelOffset" value="0,.5,.5"/>
+				<property name="MultiBlockDim" value="2,2,1" />
+			</block>
+			<block id="" name="HazardSignVirusSmall"> 
+				<property name="Extends" value="signRoadArrowheadApache"/>
+				<property name="CreativeMode" value="Dev"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#HazardSigns?HazardSignVirusSmallPrefab" /> 
+				<property name="CustomIcon" value="ui_game_symbol_hazardsign" />
+				<property name="MultiBlockDim" value="1,1,1" />
+			</block>			
+		</append>
+	</config>
+</configs>
