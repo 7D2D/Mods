@@ -1,0 +1,59 @@
+<configs>
+	<!--  This tells SDX to add to the blocks.xml -->
+	<config name="blocks">	
+		<!-- This tells SDX to add the following block to the bottom of the block list -->
+		<append xpath="/blocks">	
+			<block id="" name="mortarAndPestle">
+				<property name="Class" value="Workstation"/>
+				<property class="Workstation">
+					<property name="Modules" value="output" />
+					<property name="CraftingAreaRecipes" value="player,workbench"/> <!-- change this from workbench to MortarandPestle when recipes are changed -->
+				</property>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#MortarandPestle?MortarandPestlePrefab" />
+				<property name="CustomIcon" value="ui_game_symbol_mortarAndPestle" />
+				<property name="Material" value="MstoneNoGlue"/>
+				<property name="MaxDamage" value="100"/>
+				<property name="StabilitySupport" value="false"/> 
+				<property name="Stacknumber" value="1" />
+				<property name="HeatMapStrength" value="1" />
+				<property name="HeatMapTime" value="1200" />
+				<property name="HeatMapFrequency" value="25" />
+				<property name="ImposterDontBlock" value="true"/>
+				<property name="IsTerrainDecoration" value="true"/>
+	<!--			<property name="CraftingSkillGroup" value="Science" /> -->
+				<property class="RepairItems">
+					<property name="rockSmall" value="5" />
+				</property>
+				<drop event="Harvest" name="" count="0" tool_category="Disassemble" />
+				<drop event="Destroy" name="" count="0" tool_category="Disassemble" />
+				<drop event="Destroy" count="0" />
+				<property name="DescriptionKey" value="mortarAndPestleDesc" />
+				<property name="EconomicValue" value="5"/>
+				<property name="EconomicBundleSize" value="1"/>
+				<property name="SellableToTrader" value="false"/>
+				<property name="Group" value="Building,Science"/>
+			</block>
+		</append>
+	</config>
+	<config name="recipes">
+		<append xpath="/recipes" >
+			<recipe name="mortarAndPestle" count="1" craft_area="forge" material_based="true" craft_time="250" craft_exp_gain="50">
+				<ingredient name="unit_lead" count="1" />
+				<ingredient name="unit_clay" count="5" />
+				<ingredient name="unit_stone" count="10" />
+			</recipe>
+		</append>
+	</config>
+	<config name="xui">
+		<append xpath="/xui/ruleset" >
+			<window_group name="workstation_mortarAndPestle" controller="XUiC_WorkstationWindowGroup">
+				<window name="windowCraftingList" />
+				<window name="craftingInfoPanel" />
+				<window name="windowCraftingQueue" />
+				<window name="windowOutput" />
+				<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	</config> 
+</configs>
