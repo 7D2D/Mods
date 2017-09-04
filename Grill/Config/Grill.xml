@@ -1,0 +1,63 @@
+<configs>
+	<!--  This tells SDX to add to the blocks.xml -->
+	<config name="blocks">	
+		<!-- This tells SDX to add the following block to the bottom of the block list -->
+		<append xpath="/blocks">	
+	<block id="1985" name="grill">
+		<property name="Class" value="Campfire" />
+		<property name="Material" value="metal" />
+		<property name="MultiBlockDim" value="1,1,1" />
+		<property name="Shape" value="ModelEntity" />
+		<property name="Model" value="#Grill?GrillPrefab" /> <!-- Grill Textured by christinejurewicz is licensed under CC Attribution -->
+		<property name="CustomIcon" value="ui_game_symbol_grill" />
+		<property name="Collide" value="melee,bullet,arrow,rocket" />
+		<property name="IsTerrainDecoration" value="true" />
+		<property name="ParticleName" value="campfire" />
+		<property name="ParticleOffset" value=".60,.70,.45" />
+		<property name="Stacknumber" value="1" />
+		<property name="HeatMapStrength" value="2" />
+		<property name="HeatMapTime" value="1200" />
+		<property name="HeatMapFrequency" value="25" />
+		<property name="MaxDamage" value="100" />
+		<property name="BuffsWhenWalkedOn" value="blockBurn3Trigger" />
+		<property name="ActiveRadiusEffects" value="+heatSource(3)" />
+		<property class="Workstation">
+	<!--		<property name="CraftingAreaRecipes" value="grill,campfire" /> -->
+			<property name="Modules" value="tools,output,fuel,input" />
+		</property>
+		<property class="RepairItems"> <property name="scrapIron" value="20" /> </property>
+ 		<drop event="Destroy" name="scrapIron" count="5,10" />
+        <drop event="Destroy" count="0" />
+		<drop event="Fall" name="scrapMetalPile" count="1" prob=".5" stick_chance="1" />
+        <property name="Group" value="Food/Cooking" />
+		<property name="DescriptionKey" value="grillDesc" />
+	<!--	<property name="CraftingSkillGroup" value="cooking" /> -->
+		<property name="EconomicValue" value="5" />
+		<property name="EconomicBundleSize" value="1" />
+		<property name="SellableToTrader" value="false" />
+	</block>
+		</append>
+	</config>
+	<config name="recipes">
+		<append xpath="/recipes" >
+			<recipe name="grill" count="1" craft_area="forge" material_based="true" craft_time="250" craft_exp_gain="50">
+				<ingredient name="unit_lead" count="1" />
+				<ingredient name="unit_clay" count="5" />
+				<ingredient name="unit_iron" count="100" />
+			</recipe>
+		</append>
+	</config>
+	<config name="xui">
+		<append xpath="/xui/ruleset" >
+			<window_group name="workstation_grill" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	</config> 
+</configs>
