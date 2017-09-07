@@ -1,18 +1,13 @@
 <mod>
 	<info>
-		<!-- Information about the Mod, the author and version information -->
-		<!-- These are displayed in the SDX Launcher -->
 		<author>Xyth</author>
 		<name>OldMotorbikes</name>
-		<description>Old and rusty motorcycles, perfect for terrain decoration</description>
-		<mod_version>1.0</mod_version>
+		<description>Old motorcycles, perfect for terrain decoration</description>
+		<mod_version>1.1</mod_version>
 		<game_version>16.3</game_version>
-		<launcher_version>0.0.0</launcher_version>
+		<launcher_version>0.7.1</launcher_version>
 	</info>
-	
-	<!-- This references any config files that SDX needs to merge into your files -->
 	<config_mods>
 		<import file="Config\OldMotorbikes.xml" />
     </config_mods>
-	
 </mod>

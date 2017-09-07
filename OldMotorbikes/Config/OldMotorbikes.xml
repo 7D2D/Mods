@@ -1,13 +1,11 @@
 <configs>
-	<!--  This tells SDX to add to the blocks.xml -->
 	<config name="blocks">	
-		<!-- This tells SDX to add the following block to the bottom of the block list -->
 		<append xpath="/blocks">	
 			<block id="" name="MotorbikeDown"> <!-- All 3 motorcycles are free Unity store assets, by Artistic Mechanics -->
 				<property name="Extends" value="cntCar03SedanDamage2" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#Motorbikes?MotorbikeDownPrefab" /> <!-- lays flat on handlebars and pegs -->
-				<property name="CustomIcon" value="cntCar03SedanDamage0" />
+				<property name="CustomIcon" value="ui_game_symbol_oldMotorbikes" />
 				<property name="MultiBlockDim" value="3,1,2" />
 				<property name="BigDecorationRadius" value="3" />
 			</block>
@@ -15,7 +13,7 @@
 				<property name="Extends" value="cntCar03SedanDamage2" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#Motorbikes?MotorbikeUpStandUpPrefab" /> <!-- Same model, standing up with kickstand up, good for laying against a block wall -->
-				<property name="CustomIcon" value="cntCar03SedanDamage0" />
+				<property name="CustomIcon" value="ui_game_symbol_oldMotorbikes" />
 				<property name="MultiBlockDim" value="3,2,1" />
 				<property name="BigDecorationRadius" value="3" />
 			</block>			
@@ -23,10 +21,26 @@
 				<property name="Extends" value="cntCar03SedanDamage2" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#Motorbikes?MotorbikeUpStandDownPrefab" /> <!-- Same model, standing Up on kickstand -->
-				<property name="CustomIcon" value="cntCar03SedanDamage0" />
+				<property name="CustomIcon" value="ui_game_symbol_oldMotorbikes" />
 				<property name="MultiBlockDim" value="3,2,1" />
 				<property name="BigDecorationRadius" value="3" />
 			</block>
+			<block id="" name="HarleyDown"> <!--Harley-Davidson WLA models by Antonio Rodriguez are licensed under CC Attribution -->
+				<property name="Extends" value="cntCar03SedanDamage2" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Motorbikes?HarleyDownPrefab" /> <!-- lays flat on handlebars and pegs -->
+				<property name="CustomIcon" value="ui_game_symbol_oldMotorbikes" />
+				<property name="MultiBlockDim" value="3,1,2" />
+				<property name="BigDecorationRadius" value="3" />
+			</block>
+			<block id="" name="HarleyUp">
+				<property name="Extends" value="cntCar03SedanDamage2" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Motorbikes?HarleyUpPrefab" /> <!-- Same model, standing up -->
+				<property name="CustomIcon" value="ui_game_symbol_oldMotorbikes" />
+				<property name="MultiBlockDim" value="3,2,1" />
+				<property name="BigDecorationRadius" value="3" />
+			</block>						
 		</append>
 	</config>
 </configs>
