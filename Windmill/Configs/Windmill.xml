@@ -13,7 +13,7 @@
 	<config name="blocks">
 <!--		<set xpath="/blocks/block[@id='2004']/property[@name='Class']/@value">Windmill, Mods</set> For testing only -->
 		<append xpath="/blocks">
-			<block id="2003" name="Windmill">
+			<block id="" name="Windmill">
 				<property name="Class" value="Windmill, Mods" />
 				<property name="Material" value="metal" />
 				<property name="Shape" value="ModelEntity" />

@@ -3,7 +3,7 @@
 	<config name="blocks">	
 		<!-- This tells SDX to add the following block to the bottom of the block list -->
 		<append xpath="/blocks">	
-	<block id="1985" name="grill">
+	<block id="" name="grill">
 		<property name="Class" value="Campfire" />
 		<property name="Material" value="metal" />
 		<property name="MultiBlockDim" value="1,1,1" />
