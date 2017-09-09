@@ -1,0 +1,53 @@
+<configs>
+	<config name="recipes">
+		<append xpath="/recipes">
+			<recipe name="Windmill" count="1" scrapable="False">
+			<ingredient name="forgedSteel" count="20" />
+			<ingredient name="carBattery" count="1" />
+			<ingredient name="electricParts" count="3" />
+			<ingredient name="smallEngine" count="2" />
+			<ingredient name="electronicParts" count="20" />
+			</recipe>
+		</append>
+	</config>
+	<config name="blocks">
+<!--		<set xpath="/blocks/block[@id='2004']/property[@name='Class']/@value">Windmill, Mods</set> For testing only -->
+		<append xpath="/blocks">
+			<block id="2003" name="Windmill">
+				<property name="Class" value="Windmill, Mods" />
+				<property name="Material" value="metal" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Windmill?Windmill" /> <!--Windmill model (Edits by Xyth) by Adrian Hage is licensed under CC Attribution -->
+				<property name="CustomIcon" value="ui_game_symbol_windmill" />
+				<property name="StabilitySupport" value="false"/>
+				<property name="Mesh" value="models"/>
+				<property name="MultiBlockDim" value="2,20,2"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="OnlySimpleRotations" value="true"/>
+				<property name="ImposterDontBlock" value="true"/>
+				<property name="DescriptionKey" value="powerWindSourceDesc"/>
+	<!--		<property name="OutputPerStack" value="50"/> Not needed - for future dev  -->
+				<property name="MinWindSpeed" value="15"/> <!-- If winspeed is greater or equal this windmill will start if turned on -->
+				<property name="MaxWindSpeed" value="40"/> <!-- Just for rotation speed calculation - leave alone -->
+				<property name="WattPerMph" value="3"/> <!-- Adjust this to change how many watts are outputted per wind speed -->
+				<property name="SlotItem" value=""/> <!-- No slot item is used at this time -->
+				<property name="MaxPower" value="180"/>
+				<property name="Group" value="Science"/>
+				<property name="ActivationDistance" value="6"/>
+				<property class="RepairItems">
+					<property name="forgedIron" value="5"/>
+					<property name="electricParts" value="3"/>
+					<property name="electronicParts" value="2"/>
+					<property name="scrapPlastics" value="2"/>
+				</property>
+				<drop event="Harvest" name="" count="0" tool_category="Disassemble"/>
+				<drop event="Destroy" count="0"/>
+				<drop event="Destroy" name="Windmill" count="1" tool_category="Disassemble"/>
+				<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+				<property name="Stacknumber" value="1"/>
+				<property name="TakeDelay" value="15"/>
+				<property name="EconomicValue" value="2000"/>
+			</block>
+		</append>
+	</config>
+</configs>
