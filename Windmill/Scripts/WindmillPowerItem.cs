@@ -1,21 +1,34 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using Audio;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class WindmillPowerItem : PowerSource 
 {
+    private float Frequency = 45f;
+    private float Amplitude = 0.9f;
+    private float HeightAdvantage = 0.25f;
+
     private float CurrentWindSpeed;
     private string IdleSound;
-    private float NextUpdateTime;
+    private ulong NextUpdateTime = 0;
+    private ulong NextWindUpdateTime = 0;
 
-    private int UpdateTime = 2;
+    private int UpdateTimeInSeconds = 60;
 
     private float MinSpeed = 10;
     private float MaxSpeed = 20;
     private float WattPerMph = 2;
 
     private Animator animator;
+
+    private float lastChange = 99999f;
+    private ushort last;
+
 
     public override PowerItemTypes PowerItemType
     {
@@ -50,11 +63,14 @@ public class WindmillPowerItem : PowerSource
     IEnumerator ChangeSpeed(float targetSpeed)
     {
 
+        if (GameManager.IsDedicatedServer) yield break;
+
         var myCounter = ++updateCounter;
         float time = 0f;
         var totalTime = 10;
         var speed = animator.GetFloat("Speed");
 
+        if (animator == null) yield break;
         while (true)
         {
             var newSpeed = Mathf.Lerp(speed, targetSpeed, time / totalTime);
@@ -66,20 +82,32 @@ public class WindmillPowerItem : PowerSource
             yield return null;
         }
     }
-
-    private float lastChange = 99999f;
-
+    
+    
     private void CanPower()
     {
-        
-        var last = CurrentPower;
-        //if (TileEntity != null)
-        //{
-        //    Chunk chunk = TileEntity.GetChunk();
-        //    Vector3i localChunkPos = TileEntity.localChunkPos;
-        //}
+        if (GameManager.Instance == null || GameManager.Instance.World == null)
+        {
+            Debug.Log("World missing");
+            return;
+        }
+        last = CurrentPower;
+        if (TileEntity == null )
+        {
+            return;
+        }
 
-        CurrentWindSpeed = EntityStats.WeatherSurvivalEnabled ? WeatherManager.theInstance.GetCurrentWindValue() : 15;
+        if (GameManager.Instance.World.worldTime > NextWindUpdateTime || (NextWindUpdateTime - GameManager.Instance.World.worldTime) > 1000)
+        {
+            //random noise based on x/z location
+            var pos = TileEntity.ToWorldPos();
+            var noise = Mathf.PerlinNoise((GameManager.Instance.World.worldTime + (ulong) pos.x) * (Amplitude / Frequency), pos.z * (Amplitude / Frequency));
+            //height advantage based on y position
+            var height = (pos.y / 255f) * HeightAdvantage;
+            CurrentWindSpeed = MaxSpeed * (noise + height); //(EntityStats.WeatherSurvivalEnabled && WeatherManager.theInstance != null) ? WeatherManager.theInstance.GetCurrentWindValue() : 15;
+            NextWindUpdateTime = GameManager.Instance.World.worldTime + (ulong)((16.666) * UpdateTimeInSeconds);
+            //Debug.Log("Wind: " + CurrentWindSpeed + " y-pos: " + pos.y);
+        }
 
         if (CurrentWindSpeed < MinSpeed)
         {
@@ -88,14 +116,32 @@ public class WindmillPowerItem : PowerSource
         else
         {
             CurrentPower = (ushort)(CurrentWindSpeed * WattPerMph);
-
         }
+
         if (CurrentPower > 0)
             RequiredPower = MaxPower = MaxOutput = CurrentPower;
 
         //Debug.Log("Current Windspeed: " + CurrentWindSpeed + " / Current Power: " + CurrentPower);
+        UpdateAnimation();
+
+
+        if (last == CurrentPower) return;
         
-        if (animator == null && TileEntity != null)
+        HandleOnOffSound();
+        if (CurrentPower == 0)
+        {
+            GameManager.Instance.StartCoroutine(ChangeSpeed(0));
+            HandleDisconnect();
+        }
+        else
+            SendHasLocalChangesToRoot();
+    }
+
+    
+    private void UpdateAnimation()
+    {
+      
+        if (!GameManager.IsDedicatedServer && animator == null && TileEntity != null)
             animator = TileEntity.BlockTransform.gameObject.GetComponent<Animator>();
 
         if (animator != null)
@@ -109,28 +155,17 @@ public class WindmillPowerItem : PowerSource
             }
         }
 
-        if (last == CurrentPower) return;
-
-        HandleOnOffSound();
-        if (CurrentPower == 0)
-        {
-            GameManager.Instance.StartCoroutine(ChangeSpeed(0));
-            HandleDisconnect();
-        }
-        else
-            SendHasLocalChangesToRoot();
     }
-
+    
     protected override void TickPowerGeneration()
     {
-        //Debug.Log("Tick: " + MaxOutput);
-        //if (CurrentWindSpeed == 0) return;
-        //CurrentPower = MaxOutput;
-        //Debug.Log("Current power: " + CurrentPower);
+
     }
 
     public override void HandleSendPower()
     {
+        if (GameManager.Instance == null || GameManager.Instance.World == null) return;
+
         if (!IsOn)
         {
             if (animator != null && CurrentPower > 0)
@@ -140,12 +175,12 @@ public class WindmillPowerItem : PowerSource
             }
             return;
         }
-        if (Time.time > NextUpdateTime)
+        if (GameManager.Instance.World.worldTime > NextUpdateTime || (NextUpdateTime - GameManager.Instance.World.worldTime) > 1000)
         {
-            NextUpdateTime = Time.time + UpdateTime;
+            NextUpdateTime = GameManager.Instance.World.worldTime + (ulong)((16.666) * 2);
             CanPower();
         }
-        
+
         if (CurrentPower < MaxPower)
             TickPowerGeneration();
         else if (CurrentPower > MaxPower)
@@ -177,6 +212,7 @@ public class WindmillPowerItem : PowerSource
 
     public override void SetValuesFromBlock()
     {
+        
         base.SetValuesFromBlock();
 
         Block block = Block.list[BlockID];
@@ -205,7 +241,7 @@ public class WindmillPowerItem : PowerSource
         else
             Manager.BroadcastStop(vector3, IdleSound);
     }
-
+    
     protected override void RefreshPowerStats()
     {
         SlotCount = 0;

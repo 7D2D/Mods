@@ -26,7 +26,7 @@ public class WindmillPatcher : IPatcherMod
         var powerItem = vanilla.Types.First(d => d.Name == "PowerItem");
 
         var create = powerItem.Methods.First(d => d.Name == "CreateItem");
-
+        
         var pro = create.Body.GetILProcessor();
 
         var instructions = pro.Body.Instructions;

@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 using Audio;
+using Random = System.Random;
+
 public class BlockWindmill : BlockSolarPanel
 {
     private string LC;
@@ -23,52 +26,131 @@ public class BlockWindmill : BlockSolarPanel
         //entityPowerSource.PowerItem = new WindmillPowerItem();
         return entityPowerSource;
     }
-
-    public override bool CanPlaceBlockAt(WorldBase _world, int _clrIdx, Vector3i _blockPos, BlockValue _blockValue, bool _bOmitCollideCheck)
+    
+    IEnumerator ChangeSpeed(Animator animator, float targetSpeed)
     {
-        if (!base.CanPlaceBlockAt(_world, _clrIdx, _blockPos, _blockValue, _bOmitCollideCheck))
-            return false;
 
-        return true;
+        if (animator == null)
+        {
+            Debug.Log("Animator null");
+            yield break;
+        }
+        var speed = animator.GetFloat("Speed");
+        float time = 0f;
+        var totalTime = 10;
+        if (speed == targetSpeed)
+        {
+            Debug.Log("Speed already 0 or matching at " + speed);
+            yield break;
+        }
+        
+        while (true)
+        {
+
+            if (animator == null)
+            {
+                yield break;
+            }
+
+            var newSpeed = Mathf.Lerp(speed, targetSpeed, time / totalTime);
+            animator.SetFloat("Speed", newSpeed);
+
+            time += Time.deltaTime;
+
+            if (time > totalTime) break;
+            yield return null;
+        }
+    }
+    
+    IEnumerator CheckAnimation(Animator animator, int _cIdx, Vector3i _blockPos, float MinSpeed, float MaxSpeed, float WattsPerMph)
+    {
+
+        float lastChange = float.MinValue;
+        var ret = new WaitForSeconds(10);
+
+        var missingCount = 0;
+        //Debug.Log("Starting coroutine for Windmill " + _blockPos);
+        while (true)
+        {
+
+            if (GameManager.Instance == null || GameManager.Instance.World == null)
+            {
+                //Debug.Log("Windmill world not active");
+                yield break;
+            }
+            else
+            {
+                TileEntityPowerSource tileEntity = GameManager.Instance.World.GetTileEntity(_cIdx, _blockPos) as TileEntityPowerSource;
+                if (tileEntity == null)
+                {
+                    Log.Out("Tile Entity missing for windmill count" + missingCount);
+                    if (++missingCount > 5) break;
+                }
+                else if (animator != null)
+                {
+                    var CurrentWindSpeed = (float)tileEntity.MaxOutput / WattsPerMph;
+                    var speed = CurrentWindSpeed < MinSpeed ? 0 : CurrentWindSpeed / MaxSpeed;
+                    var change = Mathf.Abs(speed - lastChange);
+                    if (change > 0.1f || CurrentWindSpeed == 0)
+                    {
+                        lastChange = speed;
+                        GameManager.Instance.StartCoroutine(ChangeSpeed(animator, speed));
+                    }
+                }
+            }
+
+            yield return ret;
+        }
+
+        //Debug.Log("Ending coroutine for Windmill " + _blockPos);
+
+    }
+
+
+    public override void OnBlockRemoved(WorldBase world, Chunk _chunk, Vector3i _blockPos, BlockValue _blockValue)
+    {
+        base.OnBlockRemoved(world, _chunk, _blockPos, _blockValue);
+        Manager.BroadcastStop(_blockPos.ToVector3(), this.LC);
+    }
+
+    public override void OnBlockUnloaded(WorldBase _world, int _clrIdx, Vector3i _blockPos, BlockValue _blockValue)
+    {
+        base.OnBlockUnloaded(_world, _clrIdx, _blockPos, _blockValue);
+        Manager.Stop(_blockPos.ToVector3(), this.LC);
     }
 
     public override void OnBlockEntityTransformAfterActivated(WorldBase _world, Vector3i _blockPos, int _cIdx, BlockValue _blockValue, BlockEntityData _ebcd)
     {
-        //Debug.Log("DEBUG " + _ebcd.transform.gameObject.name);
-        //DebugGO(_ebcd.transform, 0);
-        //Debug.Log("END DEBUG " + _ebcd.transform.gameObject.name);
-        //Debug.Log("");
-
+        
         base.OnBlockEntityTransformAfterActivated(_world, _blockPos, _cIdx, _blockValue, _ebcd);
         SetTag(_ebcd.transform, _ebcd.transform, "T_Block");
 
-        //TileEntityPowerSource tileEntity = _world.GetTileEntity(_cIdx, _blockPos) as TileEntityPowerSource;
-        //if (tileEntity == null)
-        //{
-        //    Debug.Log("Tile entity source was null");
-        //    ChunkCluster chunkCluster = _world.ChunkClusters[_cIdx];
-        //    if (chunkCluster == null) return;
-        //    Chunk chunkFromWorldPos = (Chunk) chunkCluster.GetChunkFromWorldPos(_blockPos);
-        //    if (chunkFromWorldPos == null) return;
-        //    tileEntity = this.CreateTileEntity(chunkFromWorldPos);
-        //    tileEntity.localChunkPos = World.toBlock(_blockPos);
-        //    chunkFromWorldPos.AddTileEntity((TileEntity) tileEntity);
-        //    Log.Out("DEBUG !!!!!!!   TileEntityPowerSource not found (" + (object) _blockPos + ")");
-        //}
-        //else
-        //{
-        //    Debug.Log("Tile entity source: " + tileEntity.BlockTransform.name);
-        //}
-        //tileEntity.PowerItem = new WindmillPowerItem();
 
-        //PowerSource powerSource = tileEntity.GetPowerItem() as PowerSource;
-        //if (powerSource != null)
-        //{
+        //this is a really ugly way of doing it but there's no update tick on clients for dedi support
+        if (Network.isClient)
+        {
+            Block block = Block.list.FirstOrDefault(d=> d != null && d.GetBlockName() == "Windmill"); //.list[BlockID];
 
-        //}
-
+            if (block == null)
+            {
+                Debug.Log("Can't find windmill block");
+                return;
+            }
+            var MinSpeed = 0f;
+            var MaxSpeed = 0f;
+            var WattPerMph = 0f;
+            if (block.Properties.Values.ContainsKey("MinWindSpeed"))
+                MinSpeed = float.Parse(block.Properties.Values["MinWindSpeed"]);
+            if (block.Properties.Values.ContainsKey("MaxWindSpeed"))
+                MaxSpeed = float.Parse(block.Properties.Values["MaxWindSpeed"]);
+            if (block.Properties.Values.ContainsKey("WattPerMph"))
+                WattPerMph = float.Parse(block.Properties.Values["WattPerMph"]);
+            
+            var animator = _ebcd.transform.gameObject.GetComponent<Animator>();
+            GameManager.Instance.StartCoroutine(CheckAnimation(animator, _cIdx, _blockPos, MinSpeed, MaxSpeed, WattPerMph));
+        }
     }
-
+    
     public override BlockActivationCommand[] GetBlockActivationCommands(WorldBase _world, BlockValue _blockValue, int _clrIdx, Vector3i _blockPos, EntityAlive _entityFocusing)
     {
         var ret = base.GetBlockActivationCommands(_world, _blockValue, _clrIdx, _blockPos, _entityFocusing);
@@ -80,34 +162,7 @@ public class BlockWindmill : BlockSolarPanel
         var ret = base.GetActivationText(_world, _blockValue, _clrIdx, _blockPos, _entityFocusing);
         return ret;
     }
-    public static void DebugGO(Transform tran, int Depth)
-    {
-
-        Component[] comp = tran.GetComponents<Component>();
-
-        //  Debug.Log(tran.name + "=" + comp.Length);
-        foreach (Component c in comp)
-        {
-            string offset = "";
-            for (int x = 0; x < Depth; x++)
-            {
-                offset += "-";
-            }
-            Debug.Log(offset + " Comp: " + c.name + " (" + c.GetType().Name + ")");
-
-        }
-
-        foreach (Component c in comp)
-        {
-            if (c.GetType() == typeof(Transform))
-            {
-                foreach (Transform t in ((Transform)c))
-                    DebugGO(t, Depth + 1);
-            }
-        }
-
-    }
-
+  
     private void SetTag(Transform root, Transform t, string tag)
     {
         t.tag = tag;
@@ -129,18 +184,6 @@ public class BlockWindmill : BlockSolarPanel
     protected override string GetPowerSourceIcon()
     {
         return "electric_solar";
-    }
-
-    public override void OnBlockRemoved(WorldBase world, Chunk _chunk, Vector3i _blockPos, BlockValue _blockValue)
-    {
-        base.OnBlockRemoved(world, _chunk, _blockPos, _blockValue);
-        Manager.BroadcastStop(_blockPos.ToVector3(), this.LC);
-    }
-
-    public override void OnBlockUnloaded(WorldBase _world, int _clrIdx, Vector3i _blockPos, BlockValue _blockValue)
-    {
-        base.OnBlockUnloaded(_world, _clrIdx, _blockPos, _blockValue);
-        Manager.Stop(_blockPos.ToVector3(), this.LC);
     }
 
 }
