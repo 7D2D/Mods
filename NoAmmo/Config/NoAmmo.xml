@@ -1,0 +1,33 @@
+<configs>
+	<config name="items">	
+		<append xpath="/items">	
+			<item id="" name="NoAmmo">
+				<property name="CreativeMode" value="None" />
+				<property name="Meshfile" value="Items/Misc/sackPrefab" />
+				<property name="CustomIcon" value="Unload" />
+				<property name="Material" value="lead" />
+				<property name="HoldType" value="45" />
+				<property name="Stacknumber" value="250" />
+				<property name="Group" value="Ammo/Weapons" />
+				<property class="Attributes">
+					<property name="GetQualityFromWeapon" value="true" />
+					<property name="EntityDamage" value="0" />
+					<property name="BlockDamage" value="0" />
+				</property>
+			</item>
+		</append>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='9mmBullet']/@value">9mmBullet,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='44MagBullet']/@value">44MagBullet,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='shotgunShell']/@value">shotgunShell,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='shotgunShell, shotgunSlug']/@value">shotgunShell, shotgunSlug,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='762mmBullet']/@value">762mmBullet,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='rocket']/@value">rocket,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='blunderbussAmmo']/@value">blunderbussAmmo,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='nail']/@value">nail,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='gasCan']/@value">gasCan,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='arrow,ironArrow,steelArrow']/@value">arrow,ironArrow,steelArrow,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='ironCrossbowBolt, steelCrossbowBolt, explodingCrossbowBolt, shotgunSlug']/@value">ironCrossbowBolt, steelCrossbowBolt, explodingCrossbowBolt, shotgunSlug,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='arrow,ironArrow,steelArrow,flamingArrow']/@value">arrow,ironArrow,steelArrow,flamingArrow,NoAmmo</set>
+			<set xpath="/items/item/property[@class='Action0']/property[@name='Magazine_items'][@value='ironCrossbowBolt, steelCrossbowBolt, explodingCrossbowBolt']/@value">ironCrossbowBolt, steelCrossbowBolt, explodingCrossbowBolt,NoAmmo</set>
+	</config>
+</configs>
