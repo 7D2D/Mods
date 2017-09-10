@@ -1,0 +1,1 @@
+Simple little mod to allow you to press the reload key  "R" and select "NoAmmo" which will then unload that weapon.  Great for when you find a crappy gun and want to unload it, but you dont have the skill to disassemble it.
