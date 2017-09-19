@@ -7,7 +7,7 @@
 				<property name="CustomIcon" value="ui_game_symbol_pinup01" />
 				<property name="Material" value="paper" />
 				<property name="Shape" value="ModelEntity" />
-				<property name="Model" value="#ZombiePinups?Pinup01Prefab" />
+				<property name="Model" value="#PinupPosters?PinupPoster01Prefab" />
 				<property name="CanPickup" value="true" />
 				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 				<property name="DescriptionKey" value="Pinups" />
@@ -20,7 +20,7 @@
 				<property name="CustomIcon" value="ui_game_symbol_pinup02" />
 				<property name="Material" value="paper" />
 				<property name="Shape" value="ModelEntity" />
-				<property name="Model" value="#ZombiePinups?Pinup02Prefab" />
+				<property name="Model" value="#PinupPosters?PinupPoster02Prefab" />
 				<property name="CanPickup" value="true" />
 				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 				<property name="DescriptionKey" value="Pinups" />
@@ -33,7 +33,7 @@
 				<property name="CustomIcon" value="ui_game_symbol_pinup03" />
 				<property name="Material" value="paper" />
 				<property name="Shape" value="ModelEntity" />
-				<property name="Model" value="#ZombiePinups?Pinup03Prefab" />
+				<property name="Model" value="#PinupPosters?PinupPoster03Prefab" />
 				<property name="CanPickup" value="true" />
 				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 				<property name="DescriptionKey" value="Pinups" />
@@ -46,7 +46,7 @@
 				<property name="CustomIcon" value="ui_game_symbol_pinup04" />
 				<property name="Material" value="paper" />
 				<property name="Shape" value="ModelEntity" />
-				<property name="Model" value="#ZombiePinups?Pinup04Prefab" />
+				<property name="Model" value="#PinupPosters?PinupPoster04Prefab" />
 				<property name="CanPickup" value="true" />
 				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 				<property name="DescriptionKey" value="Pinups" />
