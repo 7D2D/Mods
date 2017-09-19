@@ -1,0 +1,162 @@
+<configs>
+	<config name="blocks">
+		<set xpath="/blocks/block[@name='autoTurret']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/blocks/block[@name='autoTurret']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+	</config>
+	<config name="items">	
+		<set xpath="/items/item[@name='clubMaster']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='clubMaster']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='clubWood']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='clubWood']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='clubIron']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='clubIron']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='clubBarbed']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='clubBarbed']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>		
+		<set xpath="/items/item[@name='clubSpiked']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='clubSpiked']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='sledgehammer']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='sledgehammer']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='torch']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">5</set>
+		<insertAfter xpath="/items/item[@name='torch']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='flashlight02']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">5</set>
+		<insertAfter xpath="/items/item[@name='flashlight02']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>	
+		<set xpath="/items/item[@name='femur']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">5</set>
+		<insertAfter xpath="/items/item[@name='femur']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='boneShiv']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='boneShiv']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='huntingKnife']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='huntingKnife']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='machete']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='machete']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>		
+		<set xpath="/items/item[@name='gunPistol']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gunPistol']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='gunPistolSilenced']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gunPistolSilenced']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='gun44Magnum']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gun44Magnum']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='gunSawedOffPumpShotgun']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gunSawedOffPumpShotgun']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='gunPumpShotgun']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gunPumpShotgun']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='gunMP5']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gunMP5']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='gunAK47']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gunAK47']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='gunHuntingRifle']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gunHuntingRifle']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>		
+		<set xpath="/items/item[@name='gunSniperRifle']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='gunSniperRifle']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='blunderbuss']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='blunderbuss']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='handPlayer']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">5</set>
+		<insertAfter xpath="/items/item[@name='handPlayer']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='stoneAxe']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='stoneAxe']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>	
+		<set xpath="/items/item[@name='fireaxeIron']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='fireaxeIron']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='pickaxeIron']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='pickaxeIron']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='pickaxeSteel']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='pickaxeSteel']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='stoneShovel']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">5</set>
+		<insertAfter xpath="/items/item[@name='stoneShovel']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>		
+		<set xpath="/items/item[@name='shovelIron']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">5</set>
+		<insertAfter xpath="/items/item[@name='shovelIron']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='hoeIron']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">5</set>
+		<insertAfter xpath="/items/item[@name='hoeIron']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='wrench']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">5</set>
+		<insertAfter xpath="/items/item[@name='wrench']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='clawHammer']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='clawHammer']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>	
+		<set xpath="/items/item[@name='nailgun']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">1</set>
+		<insertAfter xpath="/items/item[@name='nailgun']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value="1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='chainsaw']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='chainsaw']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='auger']/property[@class='Action0']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='auger']/property[@class='Action0']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='arrow']/property[@class='Action1']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='arrow']/property[@class='Action1']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>		
+		<set xpath="/items/item[@name='ironCrossbowBolt']/property[@class='Action1']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='ironCrossbowBolt']/property[@class='Action1']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+		<set xpath="/items/item[@name='nail']/property[@class='Action1']/property[@name='DamageBonus.head']/@value">10</set>
+		<insertAfter xpath="/items/item[@name='nail']/property[@class='Action1']/property[@name='DamageBonus.head']">
+			<property name="DamageBonus.body" value=".1"/>
+		</insertAfter>
+	</config>
+</configs>
