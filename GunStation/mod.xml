@@ -1,0 +1,18 @@
+<mod>
+	<info>
+		<!-- Information about the Mod, the author and version information -->
+		<!-- These are displayed in the SDX Launcher -->
+		<author>Xyth</author>
+		<name>GunStation</name>
+		<description>GunStation Mod - New gun crafting workstation for Jax.</description>
+		<mod_version>1.0</mod_version>
+		<game_version>16.3</game_version>
+		<launcher_version>0.7.2</launcher_version>
+	</info>
+	
+	<!-- This references any config files that SDX needs to merge into your files -->
+	<config_mods>
+		<import file="Config\GunStation.xml" />
+    </config_mods>
+	
+</mod>

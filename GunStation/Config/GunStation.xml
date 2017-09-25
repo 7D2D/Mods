@@ -1,0 +1,38 @@
+<configs>
+	<config name="blocks">	
+		<append xpath="/blocks">	
+			<block id="" name="gunStation">
+			<property name="Extends" value="workbench"/>
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#GunStation?GunStationPrefab" />
+				<property name="CustomIcon" value="ui_game_symbol_gunStation" />
+				<property name="MultiBlockDim" value="2,2,1" />
+				<property name="DescriptionKey" value="gunStationDesc" />
+				<property name="Place" value="TowardsPlacer"/>
+			</block>
+		</append>
+	</config>
+	<config name="recipes">
+		<append xpath="/recipes" >
+			<recipe name="gunStation" count="1">
+				<ingredient name="forgedIron" count="25" />
+				<ingredient name="mechanicalParts" count="20" />
+				<ingredient name="wrench" count="1" />
+				<ingredient name="clawHammer" count="1" />
+				<ingredient name="wood" count="50" />
+			</recipe>
+		</append>
+	</config>
+	<config name="xui">
+		<append xpath="/xui/ruleset" >
+			<window_group name="workstation_gunStation" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowOutput" />
+			<window name="windowCombine" />
+			<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	</config> 
+</configs>
