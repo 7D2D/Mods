@@ -9,6 +9,22 @@
 				<property name="MultiBlockDim" value="5,5,20" />
 				<property name="BigDecorationRadius" value="20" />
 			</block>
+			<block id="" name="gunshipMusic"> 
+				<property name="Extends" value="cntCar03SedanDamage1" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Gunships?GunshipMusicPrefab" /> <!-- free model by Dwayne Mayberry -->
+				<property name="CustomIcon" value="ui_game_symbol_gunship" />
+				<property name="MultiBlockDim" value="5,5,20" />
+				<property name="BigDecorationRadius" value="20" />
+			</block>
+			<block id="" name="gunshipSound"> 
+				<property name="Extends" value="cntCar03SedanDamage1" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Gunships?GunshipSoundPrefab" /> <!-- free model by Dwayne Mayberry -->
+				<property name="CustomIcon" value="ui_game_symbol_gunship" />
+				<property name="MultiBlockDim" value="5,5,20" />
+				<property name="BigDecorationRadius" value="20" />
+			</block>
 			<block id="" name="gunshipOff"> 
 				<property name="Extends" value="cntCar03SedanDamage1" />
 				<property name="Shape" value="ModelEntity" />
