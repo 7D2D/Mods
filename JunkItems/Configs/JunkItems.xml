@@ -691,7 +691,7 @@
 				<item name="electronic3ds" />
 				<item name="electronicCellPhone" />
 				<item name="electronicClockRadio" />
-				<item name="electronicBrokenIPad" />
+				<item name="electronicBrokenIpad" />
 				<item name="electronicBrokenIPod" />
 				<item name="electronicBrokenLapTop" />
 			</lootgroup>
