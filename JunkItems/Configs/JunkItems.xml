@@ -372,7 +372,7 @@
 				<property name="DescriptionKey" value="electronicBrokenIPodDesc" />
 				<property name="Weight" value="5" />
 			</item>
-			<item id="" name="electronicBrokenIPad">
+			<item id="" name="electronicBrokenIpad">
 				<property name="Extends" value="itemMaster" />
 				<property name="Material" value="MelectronicParts" />
 				<property name="CustomIcon" value="ui_game_symbol_electronicBrokenIPad" />
