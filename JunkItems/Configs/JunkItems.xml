@@ -162,7 +162,7 @@
 				<property name="Extends" value="itemMaster" />
 				<property name="Material" value="stone" />
 				<property name="CustomIcon" value="ui_game_symbol_stoneCrackedAshTray" />
-				<property name="Weight" value="4" />
+				<property name="Weight" value="5" />
 			</item>	
 			<!-- Wood  -->
 			<item id="" name="woodSoldier">
@@ -170,28 +170,28 @@
 				<property name="CustomIcon" value="ui_game_symbol_woodSoldier" />
 				<property name="DescriptionKey" value="woodSoldierDesc" />
 				<property name="Material" value="wood" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="woodWhistle">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_woodWhistle" />
 				<property name="DescriptionKey" value="woodWhistleDesc" />
 				<property name="Material" value="wood" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="woodSpoon">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_woodSpoon" />
 				<property name="DescriptionKey" value="woodSpoonDesc" />
 				<property name="Material" value="wood" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="woodYoyo">
 				<property name="Extends" value="itemMaster" />
 				<property name="Material" value="wood" />
 				<property name="CustomIcon" value="ui_game_symbol_woodYoyo" />
 				<property name="DescriptionKey" value="woodYoyoDesc" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="5" />
 			</item>
 			<!-- Paper   -->
 			<item id="" name="paperPlayingCards">
@@ -199,35 +199,35 @@
 				<property name="CustomIcon" value="ui_game_symbol_paperPlayingCards" />
 				<property name="DescriptionKey" value="paperPlayingCardsDesc" />
 				<property name="Material" value="paper" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="3" />
 			</item>
 			<item id="" name="paperNews">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_paperNews" />
 				<property name="DescriptionKey" value="paperNewsDesc" />
 				<property name="Material" value="paper" />
-				<property name="Weight" value="4" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="paperToilet">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_paperToilet" />
 				<property name="DescriptionKey" value="paperToiletDesc" />
 				<property name="Material" value="paper" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="4" />
 			</item>
 			<item id="" name="paperGoggles">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_paperGoggles" />
 				<property name="DescriptionKey" value="paperGogglesDesc" />
 				<property name="Material" value="paper" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="3" />
 			</item>
 			<item id="" name="paperMatches">
 				<property name="Extends" value="itemMaster" />
 				<property name="Material" value="paper" />
 				<property name="CustomIcon" value="ui_game_symbol_paperMatches" />
 				<property name="DescriptionKey" value="paperMatchesDesc" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="3" />
 			</item>	
 			<!-- Cloth  -->
 			<item id="" name="clothTeddyBear">
@@ -349,42 +349,42 @@
 				<property name="CustomIcon" value="ui_game_symbol_electronic3ds" />
 				<property name="DescriptionKey" value="electronic3dsDesc" />
 				<property name="Material" value="MelectronicParts" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="electronicCellPhone">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_electronicCellPhone" />
 				<property name="DescriptionKey" value="electronicCellPhoneDesc" />
 				<property name="Material" value="MelectronicParts" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="electronicClockRadio">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_electronicClockRadio" />
 				<property name="DescriptionKey" value="electronicClockRadioDesc" />
 				<property name="Material" value="MelectronicParts" />
-				<property name="Weight" value="3" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="electronicBrokenIPod">
 				<property name="Extends" value="itemMaster" />
 				<property name="Material" value="MelectronicParts" />
 				<property name="CustomIcon" value="ui_game_symbol_electronicBrokenIPod" />
 				<property name="DescriptionKey" value="electronicBrokenIPodDesc" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="electronicBrokenIPad">
 				<property name="Extends" value="itemMaster" />
 				<property name="Material" value="MelectronicParts" />
 				<property name="CustomIcon" value="ui_game_symbol_electronicBrokenIPad" />
 				<property name="DescriptionKey" value="electronicBrokenIPadDesc" />
-				<property name="Weight" value="4" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="electronicBrokenLapTop">
 				<property name="Extends" value="itemMaster" />
 				<property name="Material" value="MelectronicParts" />
 				<property name="CustomIcon" value="ui_game_symbol_electronicBrokenLapTop" />
 				<property name="DescriptionKey" value="electronicBrokenLapTopDesc" />
-				<property name="Weight" value="8" />
+				<property name="Weight" value="10" />
 			</item>	
 			<!-- Electrical  -->
 			<item id="" name="electricShaver">
@@ -392,7 +392,7 @@
 				<property name="CustomIcon" value="ui_game_symbol_electricShaver" />
 				<property name="DescriptionKey" value="electricShaverDesc" />
 				<property name="Material" value="MelectricParts" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="3" />
 			</item>
 			<item id="" name="electricToyMotor">
 				<property name="Extends" value="itemMaster" />
@@ -406,7 +406,7 @@
 				<property name="CustomIcon" value="ui_game_symbol_electricToaster" />
 				<property name="DescriptionKey" value="electricToasterDesc" />
 				<property name="Material" value="MelectricParts" />
-				<property name="Weight" value="3" />
+				<property name="Weight" value="5" />
 			</item>
 			<item id="" name="electricVibrator">
 				<property name="Extends" value="itemMaster" />
@@ -420,7 +420,7 @@
 				<property name="Material" value="MelectricParts" />
 				<property name="CustomIcon" value="ui_game_symbol_electricBlender" />
 				<property name="DescriptionKey" value="electricBlenderDesc" />
-				<property name="Weight" value="3" />
+				<property name="Weight" value="5" />
 			</item>
 			<!-- Mechanical  -->
 			<item id="" name="mechanicalKeyPad">
@@ -428,21 +428,21 @@
 				<property name="CustomIcon" value="ui_game_symbol_mechanicalKeyPad" />
 				<property name="DescriptionKey" value="mechanicalKeyPadDesc" />
 				<property name="Material" value="MmechanicalParts" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="3" />
 			</item>
 			<item id="" name="mechanicalOldWatch">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_mechanicalOldWatch" />
 				<property name="DescriptionKey" value="mechanicalOldWatchDesc" />
 				<property name="Material" value="MmechanicalParts" />
-				<property name="Weight" value="2" />
+				<property name="Weight" value="3" />
 			</item>
 			<item id="" name="mechanicalTypeWriter">
 				<property name="Extends" value="itemMaster" />
 				<property name="CustomIcon" value="ui_game_symbol_mechanicalTypeWriter" />
 				<property name="DescriptionKey" value="mechanicalTypeWriterDesc" />
 				<property name="Material" value="MmechanicalParts" />
-				<property name="Weight" value="4" />
+				<property name="Weight" value="5" />
 			</item>
 			<!-- Rubber  -->
 			<item id="" name="rubberDoll">
