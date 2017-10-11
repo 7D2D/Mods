@@ -8,7 +8,7 @@
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#RoadBlocks?RoadBlock01Prefab" /> <!-- Free Unity store models by Rakshi games -->
 				<property name="MultiBlockDim" value="3,1,1" />
-				<property name="Collide" value="melee,bullet,arrow,rocket" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 				<property name="CustomIcon" value="ui_game_symbol_roadblock" />
 			</block>
 			<block id="" name="RoadBlock02">
@@ -16,7 +16,7 @@
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#RoadBlocks?RoadBlock02Prefab" />
 				<property name="MultiBlockDim" value="3,1,1" />
-				<property name="Collide" value="melee,bullet,arrow,rocket" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 				<property name="CustomIcon" value="ui_game_symbol_roadblock" />
 			</block>
 		</append>
