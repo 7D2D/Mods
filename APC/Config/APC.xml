@@ -1,0 +1,14 @@
+<configs>
+	<config name="blocks">	
+		<append xpath="/blocks">	
+			<block id="" name="aPC"> 
+				<property name="Extends" value="cntCar03SedanDamage1" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#APC?APCPrefab" /> <!-- Free Model -->
+				<property name="CustomIcon" value="ui_game_symbol_aPC" />
+				<property name="MultiBlockDim" value="4,4,12" />
+				<property name="BigDecorationRadius" value="12" />
+			</block>
+		</append>
+	</config>
+</configs>

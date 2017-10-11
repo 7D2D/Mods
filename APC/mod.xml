@@ -1,0 +1,13 @@
+<mod>
+	<info>
+		<author>Xyth</author>
+		<name>APC</name>
+		<description>An Armored Personnel carrier model for my friend Darkstardragon for his The Remaining Mod</description>
+		<mod_version>1.0</mod_version>
+		<game_version>16.3</game_version>
+		<launcher_version>0.7.2</launcher_version>
+	</info>
+	<config_mods>
+		<import file="Config\APC.xml" />
+    </config_mods>
+</mod>
