@@ -6,8 +6,8 @@
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#M1Abrams?M1AbramsPrefab" /> <!-- M1 Abrams Tank by willdudley is licensed under CC Attribution -->
 				<property name="CustomIcon" value="ui_game_symbol_m1Abrams" />
-				<property name="MultiBlockDim" value="5,4,15" />
-				<property name="BigDecorationRadius" value="15" />
+				<property name="MultiBlockDim" value="5,3,11" />
+				<property name="BigDecorationRadius" value="11" />
 			</block>
 		</append>
 	</config>
