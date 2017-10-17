@@ -5,7 +5,7 @@
 				<property name="Extends" value="cntCar03SedanDamage1" />
 				<property name="Shape" value="ModelEntity" />
 				<property name="Model" value="#HumVee?HumVeePrefab" /> <!-- free model by ysup12 -->
-				<property name="CustomIcon" value="cntCar03SedanDamage1" />
+				<property name="CustomIcon" value="ui_game_symbol_humvee" />
 				<property name="MultiBlockDim" value="3,2,6" />
 				<property name="BigDecorationRadius" value="6" />
 			</block>
