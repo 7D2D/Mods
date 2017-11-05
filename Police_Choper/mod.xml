@@ -1,0 +1,13 @@
+<mod>
+	<info>
+		<author>Kaiser</author>
+		<name>Police Choper</name>
+		<description>2Police Helichopter with and without animation.</description>
+		<mod_version>1.0</mod_version>
+		<game_version>16.3</game_version>
+		<launcher_version>0.7.1</launcher_version>
+	</info>
+	<config_mods>
+		<import file="Config\Police Choper.xml" />
+    </config_mods>
+</mod>

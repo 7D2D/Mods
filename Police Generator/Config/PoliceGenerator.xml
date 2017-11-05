@@ -1,0 +1,20 @@
+<configs>
+	<config name="blocks">	
+		<append xpath="/blocks">	
+			<block id="" name="GeneratorCop">
+	<property name="Extends" value="generatorbank" />
+		<property name="Model" value="#GeneratorCop?GeneratorCopPrefab" />
+		<property name="CustomIcon" value="Cop_Generator"/>
+		<property name="MaxFuel" value="2000"/>
+		<property name="MultiBlockDim" value="1,2,3" />
+		<property name="BigDecorationRadius" value="3" />
+		<property name="IsTerrainDecoration" value="true" />
+		<property name="HeatMapStrength" value="2" />
+		<property name="HeatMapTime" value="1200" />
+		<property name="HeatMapFrequency" value="25" />
+				</block>
+			</append>
+	</config>
+</configs>
+
+<!-- Models provided by Il.Ranch as a free asset package from the Unity asset store-->

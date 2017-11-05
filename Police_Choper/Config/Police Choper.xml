@@ -1,0 +1,25 @@
+<configs>
+	<config name="blocks">	
+		<append xpath="/blocks">	
+			<block id="" name="CopHeli"> 
+				<property name="Extends" value="cntCar03SedanDamage1" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#CopHeli?CopHeliPrefab" /> 
+				<property name="CustomIcon" value="CopHeli" />
+				<property name="MultiBlockDim" value="5,5,20" />
+				<property name="BigDecorationRadius" value="20" />
+			</block>
+	
+	<!-- Models provided by SICS Games as a free asset package from the Unity asset store-->
+	
+			<block id="" name="CopHelioff"> 
+				<property name="Extends" value="cntCar03SedanDamage1" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#CopHelioff?CopHelioffPrefab" />
+				<property name="CustomIcon" value="CopHeli" />
+				<property name="MultiBlockDim" value="5,5,20" />
+				<property name="BigDecorationRadius" value="20" />
+			</block>
+		</append>
+	</config>
+</configs>

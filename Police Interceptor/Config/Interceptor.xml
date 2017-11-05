@@ -1,0 +1,16 @@
+<configs>
+	<config name="blocks">	
+		<append xpath="/blocks">	
+			<block id="" name="Interceptor"> 
+				<property name="Extends" value="cntCar03SedanDamage1" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Interceptor?InterceptorPrefab" /> 
+				<property name="CustomIcon" value="Interceptor" />
+				<property name="MultiBlockDim" value="3,2,5" />
+				<property name="BigDecorationRadius" value="5" />
+				</block>
+			</append>
+	</config>
+</configs>
+
+<!-- Models provided by SICS Games as a free asset package from the Unity asset store-->
